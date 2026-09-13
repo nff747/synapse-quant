@@ -1,0 +1,35 @@
+{
+  "name": "synapse-quant",
+  "version": "1.0.0",
+  "description": "Hardware-Accelerated 1.58-Bit Ternary & INT2 Matrix GEMM Engine in WebGPU / WGSL",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "bench": "node dist/bench.js",
+    "demo": "npx serve examples"
+  },
+  "keywords": [
+    "webgpu",
+    "wgsl",
+    "bitnet",
+    "ternary",
+    "1.58-bit",
+    "quantization",
+    "llm-inference",
+    "gemm",
+    "matrix-multiplication",
+    "subgroups",
+    "compute-shaders"
+  ],
+  "author": "nff747",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.14.2",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
+  }
+}
