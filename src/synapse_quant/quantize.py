@@ -10,3 +10,6 @@ def quantize_symmetric(tensor: np.ndarray, scale: float) -> np.ndarray:
     quantized = np.round(tensor * scale)
     quantized = np.clip(quantized, -127, 127)
     return quantized.astype(np.int8)
+
+def get_version():
+    return "0.1.0"
