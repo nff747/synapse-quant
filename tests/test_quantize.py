@@ -6,3 +6,11 @@ def test_calculate_scale():
     tensor = np.array([-2.0, 1.0, 4.0], dtype=np.float32)
     scale = calculate_scale(tensor)
     assert np.isclose(scale, 127.0 / 4.0)
+
+def test_quantize_symmetric():
+    from synapse_quant.quantize import quantize_symmetric
+    tensor = np.array([-2.0, 1.0, 4.0], dtype=np.float32)
+    scale = calculate_scale(tensor)
+    q_tensor = quantize_symmetric(tensor, scale)
+    assert q_tensor.dtype == np.int8
+    assert q_tensor[2] == 127
