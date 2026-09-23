@@ -24,3 +24,7 @@ def test_dequantize_symmetric():
     dq_tensor = dequantize_symmetric(q_tensor, scale)
     
     assert np.allclose(tensor, dq_tensor, atol=0.05)
+
+def test_version():
+    from synapse_quant.quantize import get_version
+    assert get_version() == "0.1.0"
