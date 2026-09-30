@@ -31,5 +31,9 @@
     "@types/node": "^20.14.2",
     "typescript": "^5.4.5",
     "vitest": "^1.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nff747/synapse-quant.git"
   }
 }
