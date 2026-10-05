@@ -2,7 +2,7 @@
 
 > Hardware-Accelerated 1.58-Bit Ternary & INT2 Matrix GEMM Engine in WebGPU & WGSL.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-Apache_2.0-blue)](LICENSE)
 [![WebGPU](https://img.shields.io/badge/WebGPU-WGSL-red.svg)](https://www.w3.org/TR/webgpu/)
 
 `synapse-quant` provides hardware-accelerated matrix-vector multiplication (GEMV/GEMM) compute shaders designed for 1.58-bit ternary ($\{-1, 0, 1\}$) and INT2 quantized Large Language Models (BitNet b1.58 architecture).
