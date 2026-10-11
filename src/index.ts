@@ -24,3 +24,4 @@ export * from './outlier/OutlierSplitter';
 export * from './telemetry/VramCalculator';
 export * from './cluster/ScalarKMeans';
 export * from './optimizer/ClipOptimizer';
+export * from './pipeline/UnifiedQuantPipeline';
