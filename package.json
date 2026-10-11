@@ -1,40 +1,33 @@
 {
   "name": "synapse-quant",
-  "version": "1.0.0",
-  "description": "Hardware-Accelerated 1.58-Bit Ternary & INT2 Matrix GEMM Engine in WebGPU / WGSL",
+  "version": "1.1.0",
+  "description": "Ultra-High Performance 1.58-Bit (Ternary) and INT4/INT2/FP8 Quantization Engine for WebGPU & Edge Runtimes",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "vitest run",
-    "test:watch": "vitest",
-    "bench": "node dist/bench.js",
-    "demo": "npx serve examples"
+    "benchmark": "vitest run tests/benchmark_suite.test.ts"
   },
   "keywords": [
     "webgpu",
     "wgsl",
-    "bitnet",
-    "ternary",
-    "1.58-bit",
     "quantization",
-    "llm-inference",
-    "gemm",
-    "matrix-multiplication",
-    "subgroups",
-    "compute-shaders"
+    "bitpacking",
+    "ternary-llm",
+    "int4",
+    "int2",
+    "fp8",
+    "awq",
+    "smoothquant",
+    "edge-ai"
   ],
-  "author": "nff747",
+  "author": "nff747 <nff747@users.noreply.github.com>",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@types/node": "^22.0.0",
-    "typescript": "^5.4.5",
-    "vitest": "^5.0.3",
-    "vite": "^8.3.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nff747/synapse-quant.git"
+    "typescript": "^5.3.3",
+    "vite": "^5.1.4",
+    "vitest": "^1.3.1"
   }
 }
