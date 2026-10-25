@@ -32,4 +32,36 @@ export class QuantDistortion {
 
     return 10.0 * Math.log10(signalPower / noisePower);
   }
+
+  /**
+   * Peak Signal-to-Noise Ratio (PSNR) in decibels (dB) given dynamic range maxVal.
+   */
+  static psnr(original: ArrayLike<number>, reconstructed: ArrayLike<number>, maxVal?: number): number {
+    const errorMse = this.mse(original, reconstructed);
+    if (errorMse === 0) return Infinity;
+
+    let peak = maxVal;
+    if (peak === undefined) {
+      let maxAbs = 0.0;
+      for (let i = 0; i < original.length; i++) {
+        const absVal = Math.abs(original[i]);
+        if (absVal > maxAbs) maxAbs = absVal;
+      }
+      peak = maxAbs > 0 ? maxAbs : 1.0;
+    }
+
+    return 20.0 * Math.log10(peak) - 10.0 * Math.log10(errorMse);
+  }
+
+  /**
+   * Mean Absolute Error (MAE) L1 distortion.
+   */
+  static mae(original: ArrayLike<number>, reconstructed: ArrayLike<number>): number {
+    const len = original.length;
+    let sum = 0.0;
+    for (let i = 0; i < len; i++) {
+      sum += Math.abs(original[i] - reconstructed[i]);
+    }
+    return len > 0 ? sum / len : 0.0;
+  }
 }
