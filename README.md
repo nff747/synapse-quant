@@ -1,5 +1,7 @@
 # ⚡ synapse-quant
 
+[![Lunar Paradox](https://img.shields.io/badge/Organization-Lunar_Paradox-0a0e1a?style=for-the-badge&logo=probot&logoColor=d7b886)](https://lunarparadox.com)
+
 > Hardware-Accelerated 1.58-Bit Ternary & INT2 Matrix GEMM Engine in WebGPU & WGSL.
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
@@ -32,3 +34,7 @@ npm test
 ## 📄 License
 
 Apache 2.0 © [nff747](https://github.com/nff747)
+
+---
+
+*A component of the [Lunar Paradox](https://lunarparadox.com) applied systems & graphics laboratory. Engineered by nff747.*
