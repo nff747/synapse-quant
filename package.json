@@ -23,7 +23,7 @@
     "smoothquant",
     "edge-ai"
   ],
-  "author": "Lunar Paradox <engineering@lunarparadox.com>",
+  "author": "Lunar Paradox <hello@lunarparadox.com>",
   "license": "Apache-2.0",
   "devDependencies": {
     "typescript": "^5.3.3",
